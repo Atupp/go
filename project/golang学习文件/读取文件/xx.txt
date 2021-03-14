@@ -1,0 +1,15 @@
+abcd
+sadsa
+sdsadas
+asdasda
+asdsadas
+asdasdsa
+var tmp=make([]byte,128)//设置了读取的字节数大小
+n,err:=fileobj.Read(tmp)//读取的是从文件获得的字节数，也就是读取了多少字节
+if err==io.EOF {//打印文件末尾
+fmt.Println(string(tmp[:n]))
+return
+}
+if err!=nil{
+mt.Println("打印错误")
+return
