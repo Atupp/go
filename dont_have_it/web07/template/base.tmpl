@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>模板继承</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .nav {
+            height: 50px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: aqua;
+        }
+
+        .main {
+            margin-top: 50px;
+        }
+
+        .menu {
+            width: 20%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            background-color: brown;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="nav"></div>
+<div class="main">
+    <div class="menu"></div>
+    <div class="content center">
+{{/*        重新定义块模板*/}}
+
+{{block "content".}}{{end}}
+
+{{/*        上面是块模板部分*/}}
+    </div>
+</div>
+
+</body>
+</html>
